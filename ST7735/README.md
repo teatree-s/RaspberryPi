@@ -5,7 +5,9 @@
 # 1. プロジェクトについて
 
 Raspberry Pi の GPIO を使って TFT 液晶ディスプレイの ST7735 へ画像を表示するプロジェクトです。  
-ボタンを押すと、画像が切り替わります。
+ボタンを押すと、画像が切り替わります。  
+adafruit の「1.8" TFT Display Breakout and Shield / Python Usage」のコードを参考に作成しています。  
+参照元のページは下段の「adafruit Python Usage」から確認できます。
 
 <img src="./image/IMG_ST7735_4028.jpeg" width="480">
 
