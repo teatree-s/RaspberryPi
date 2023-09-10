@@ -1,10 +1,3 @@
-"""
-This program is based on the sample program at Adafruit-Python-Usage.
-(https://learn.adafruit.com/1-8-tft-display/python-usage)
-
-2021/09/06 var1.0
-"""
-
 import digitalio
 import board
 from PIL import Image, ImageDraw
@@ -29,13 +22,7 @@ spi = board.SPI()
 
 # for Display.
 disp = st7735.ST7735R(
-    spi,
-    rotation=90,
-    cs=cs_pin,
-    dc=dc_pin,
-    rst=reset_pin,
-    baudrate=BAUDRATE,
-    bgr=True
+    spi, rotation=90, cs=cs_pin, dc=dc_pin, rst=reset_pin, baudrate=BAUDRATE, bgr=True
 )
 print("Display width :", disp.width)
 print("Display height:", disp.height)
@@ -53,27 +40,34 @@ button_pinC = 6
 GPIO.setup(button_pinA, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(button_pinC, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+
 def buttonA_callback(channel):
     print("A button was pressed.")
-    global file_index,file_count
-    file_index = file_index+1
+    global file_index, file_count
+    file_index = file_index + 1
     if file_count == file_index:
-      file_index = 0
+        file_index = 0
     image = Image.open(files[file_index])
     disp_image(image)
+
 
 def buttonC_callback(channel):
     print("C button was pressed.")
-    global file_index,file_count
+    global file_index, file_count
     if file_index == 0:
-      file_index = file_count-1
+        file_index = file_count - 1
     else:
-      file_index = file_index-1
+        file_index = file_index - 1
     image = Image.open(files[file_index])
     disp_image(image)
 
-GPIO.add_event_detect(button_pinA, GPIO.FALLING, callback=buttonA_callback, bouncetime=300)
-GPIO.add_event_detect(button_pinC, GPIO.FALLING, callback=buttonC_callback, bouncetime=300)
+
+GPIO.add_event_detect(
+    button_pinA, GPIO.FALLING, callback=buttonA_callback, bouncetime=300
+)
+GPIO.add_event_detect(
+    button_pinC, GPIO.FALLING, callback=buttonC_callback, bouncetime=300
+)
 
 print("Initialize done.")
 
@@ -88,26 +82,27 @@ else:
     width = disp.width  # we swap height/width to rotate it to landscape!
     height = disp.height
 
+
 def disp_image(image):
+    # Scale the image to the smaller screen dimension
+    image_ratio = image.width / image.height
+    screen_ratio = width / height
+    if screen_ratio < image_ratio:
+        scaled_width = image.width * height // image.height
+        scaled_height = height
+    else:
+        scaled_width = width
+        scaled_height = image.height * width // image.width
+    image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
 
-  # Scale the image to the smaller screen dimension
-  image_ratio = image.width / image.height
-  screen_ratio = width / height
-  if screen_ratio < image_ratio:
-      scaled_width = image.width * height // image.height
-      scaled_height = height
-  else:
-      scaled_width = width
-      scaled_height = image.height * width // image.width
-  image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+    # Crop and center the image
+    x = scaled_width // 2 - width // 2
+    y = scaled_height // 2 - height // 2
+    image = image.crop((x, y, x + width, y + height))
 
-  # Crop and center the image
-  x = scaled_width // 2 - width // 2
-  y = scaled_height // 2 - height // 2
-  image = image.crop((x, y, x + width, y + height))
+    # Display image.
+    disp.image(image)
 
-  # Display image.
-  disp.image(image)
 
 if file_count:
     image = Image.open(files[file_index])
@@ -115,7 +110,7 @@ if file_count:
 
 try:
     while True:
-      sleep(1)
+        sleep(1)
 
 except KeyboardInterrupt:
     pass
