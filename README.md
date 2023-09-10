@@ -13,8 +13,8 @@ Raspberry Pi を対象としたプロジェクトです。
 
 # 2. GPIO and the 40-pin Header
 
-<img src="./docs/GPIO-Pinout-Diagram-2.png" width="480">
-<img src="./docs/GPIO.png" width="480">
+<img src="./docs/GPIO-Pinout-Diagram-2.png" width="640">
+<img src="./docs/GPIO.png" width="640">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
