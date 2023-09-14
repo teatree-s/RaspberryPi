@@ -35,10 +35,10 @@ file_count = len(files)
 file_index = 0
 
 # for Buttons.
-button_pinA = 5
-button_pinC = 6
-GPIO.setup(button_pinA, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(button_pinC, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+buttonA_pin = 5
+buttonC_pin = 6
+GPIO.setup(buttonA_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(buttonC_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 def buttonA_callback(channel):
@@ -63,10 +63,10 @@ def buttonC_callback(channel):
 
 
 GPIO.add_event_detect(
-    button_pinA, GPIO.FALLING, callback=buttonA_callback, bouncetime=300
+    buttonA_pin, GPIO.FALLING, callback=buttonA_callback, bouncetime=300
 )
 GPIO.add_event_detect(
-    button_pinC, GPIO.FALLING, callback=buttonC_callback, bouncetime=300
+    buttonC_pin, GPIO.FALLING, callback=buttonC_callback, bouncetime=300
 )
 
 print("Initialize done.")
