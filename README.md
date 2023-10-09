@@ -23,6 +23,7 @@ Raspberry Pi を対象としたプロジェクトです。
 Raspberry Pi を使ったプログラムを置いています。各プロジェクトにて詳細確認ください。
 
 - ST7735 : 1.8 TFT ST7735 128x160 を使ったプロジェクト
+- ST7735-Camera : TFT とカメラモジュールを使ったプロジェクト
 - ST7735-HCSR04 : TFT と超音波距離センサー、サーボモーターを使ったプロジェクト
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -34,6 +35,7 @@ Raspberry Pi を使ったプログラムを置いています。各プロジェ�
 ## 4.1. 写真
 
 <img src="./docs/IMG_ST7735_4030.jpeg" width="480">
+<img src="./docs/IMG_4074.jpeg" width="480">
 <img src="./docs/IMG_4061.jpeg" width="480">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
