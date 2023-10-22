@@ -36,7 +36,7 @@ Raspberry Pi を使ったプログラムを置いています。各プロジェ�
 ## 4.1. 写真
 
 <img src="./docs/IMG_ST7735_4030.jpeg" width="480">
-<img src="./docs/DSC00016.JPEG" width="480">
+<img src="./docs/IMG_4022.jpeg" width="480">
 <img src="./docs/IMG_4074.jpeg" width="480">
 <img src="./docs/IMG_4061.jpeg" width="480">
 
