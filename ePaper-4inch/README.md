@@ -65,6 +65,8 @@ $ sudo apt install python3-gpiozero
 
 # 3. 参考
 
+電子ペーパーについてもっと知りたい方は、3 つ目の Manual を参照ください。
+
 - [Raspberry Pi Getting started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 - [4inch e-Paper HAT+ (E)](https://www.waveshare.com/4inch-e-paper-hat-plus-e.htm)
 - [4inch e-Paper HAT+ (E) Manual](<https://www.waveshare.com/wiki/4inch_e-Paper_HAT%2B_(E)>)
