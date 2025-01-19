@@ -7,6 +7,7 @@
 Raspberry Pi の GPIO を使って 4 インチフルカラーの電子ペーパー「4inch e-Paper HAT+ (E)」へ画像を表示するプロジェクトです。
 
 - 4inch e-Paper HAT+ (E)
+
   <img src="./docs/DSC00335.jpg" width="480">
 
 Waveshare から提供されている e-Paper のサンプルコード「4inch_e-Paper_E」をベースに作成しています。
