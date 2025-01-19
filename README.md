@@ -23,6 +23,7 @@ Raspberry Pi を対象としたプロジェクトです。
 Raspberry Pi を使ったプログラムを置いています。各プロジェクトにて詳細確認ください。
 
 - ePaper : 電子ペーパーを使ったプロジェクト
+- ePaper-4inch : 4 インチフルカラーの電子ペーパーを使ったプロジェクト
 - ST7735 : 1.8 TFT ST7735 128x160 を使ったプロジェクト
 - ST7735-BM280 : TFT と温湿度・気圧センサモジュールを使ったプロジェクト
 - ST7735-Camera : TFT とカメラモジュールを使ったプロジェクト
@@ -36,6 +37,7 @@ Raspberry Pi を使ったプログラムを置いています。各プロジェ�
 
 ## 4.1. 写真
 
+<img src="./docs/DSC00334.JPEG" width="480">
 <img src="./docs/IMG_ST7735_4030.jpeg" width="480">
 <img src="./docs/IMG_4022.jpeg" width="480">
 <img src="./docs/IMG_4074.jpeg" width="480">
