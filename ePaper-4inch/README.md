@@ -63,7 +63,22 @@ $ sudo apt install python3-gpiozero
 4. 「pic/sample01.bmp」画像を表示
    1. `$ python3 sample.py `
 
-# 3. 参考
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# 3. 減色処理
+
+電子ペーパーは 400x600 のビットマップをそのまま使用しても表示できます。  
+但し、6 色(Black,White,Green,Blue,Red,Yellow)に減色したビットマップも表示することができます。こちらの方がファイルサイズは小さくなります。
+
+sample フォルダの color_reduction.py を実行すると、同フォルダにある Georges_Seurat.bmp が 6 色に減色されますので、お試しください。表示する前にイメージが確認できます。
+
+また公式のページにも変換方法や変換プログラムの記載がありますので、参考にしてください。
+
+- [Picture Processing](<https://www.waveshare.com/wiki/4inch_e-Paper_HAT%2B_(E)_Manual#Picture_Processing>)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# 4. 参考
 
 電子ペーパーについてもっと知りたい方は、3 つ目の Manual を参照ください。
 
@@ -71,7 +86,9 @@ $ sudo apt install python3-gpiozero
 - [4inch e-Paper HAT+ (E)](https://www.waveshare.com/4inch-e-paper-hat-plus-e.htm)
 - [4inch e-Paper HAT+ (E) Manual](<https://www.waveshare.com/wiki/4inch_e-Paper_HAT%2B_(E)>)
 
-# 4. 画像
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# 5. 画像
 
 <img src="./docs/DSC00334.JPEG" width="480">
 
