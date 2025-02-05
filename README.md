@@ -22,6 +22,7 @@ Raspberry Pi を対象としたプロジェクトです。
 
 Raspberry Pi を使ったプログラムを置いています。各プロジェクトにて詳細確認ください。
 
+- 1in51-Transparent-OLED : 1.51 インチの透明 OLED を使ったプロジェクト
 - ePaper : 電子ペーパーを使ったプロジェクト
 - ePaper-4inch : 4 インチフルカラーの電子ペーパーを使ったプロジェクト
 - ST7735 : 1.8 TFT ST7735 128x160 を使ったプロジェクト
@@ -37,6 +38,7 @@ Raspberry Pi を使ったプログラムを置いています。各プロジェ�
 
 ## 4.1. 写真
 
+<img src="./docs/DSC00338.JPEG" width="480">
 <img src="./docs/DSC00334.JPEG" width="480">
 <img src="./docs/IMG_ST7735_4030.jpeg" width="480">
 <img src="./docs/IMG_4022.jpeg" width="480">
