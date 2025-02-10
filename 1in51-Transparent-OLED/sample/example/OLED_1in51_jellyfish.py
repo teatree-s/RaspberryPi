@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import sys
-import os
+import os, time
 import random
 from datetime import datetime
 
@@ -90,6 +90,7 @@ try:
 
     image = Image.new("1", (disp.width, disp.height), 255)  # 255: clear the frame
 
+    lasttime = time.time()
     while True:
         image.paste(255, [0, 0, image.width, image.height])
         # Draw jellyfish
@@ -104,12 +105,15 @@ try:
         bubble2.update()
         draw.point((bubble2.x, bubble2.y))
         # Draw time
-        time_str = datetime.now().strftime("%H:%M").replace("8", "8")
+        time_str = datetime.now().strftime("%H:%M")
         draw.text((2, 2), time_str, font=font1)
-        # Show time
+        # Show Image
         image = image.rotate(180)
         disp.ShowImage(disp.getbuffer(image))
-        time.sleep(0.2)
+        # Wait 400ms
+        sleeptime = 0.4 - (time.time() - lasttime)
+        time.sleep(sleeptime)
+        lasttime = time.time()
 
 except IOError as e:
     logging.info(e)
