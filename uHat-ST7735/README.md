@@ -5,14 +5,14 @@
 # 1. プロジェクトについて
 
 Raspberry Pi の GPIO を使って TFT 液晶ディスプレイ（ST7735）へ表示するプロジェクトです。  
-Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberry Pi uHat を作成します。  
+Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberry Pi uHAT を作成します。  
 プリント基板と液晶ディスプレイをはんだ付けすれば、Raspberry Pi の GPIO ピンヘッダに挿すことで、配線無しで液晶ディスプレイを使用できます。
 
 写真は、Raspberry Pi Zero 2 W に液晶ディスプレイを取り付けています。Raspberry Pi にも使用できます。
 
 <img src="./docs/DSC00401.JPEG" width="480">
 
-本プロジェクトでは以下のパネルをサポートしています。
+本プロジェクトでサポートしているパネルです。
 
 - [adafruit Python Usage](https://learn.adafruit.com/1-8-tft-display/python-usage)
   | ST7735 128x160 |
