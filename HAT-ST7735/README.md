@@ -5,12 +5,13 @@
 # 1. プロジェクトについて
 
 Raspberry Pi の GPIO を使って TFT 液晶ディスプレイ（ST7735）へ表示するプロジェクトです。  
-Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberry Pi uHAT を作成します。  
+Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberry Pi HAT を作成します。  
 プリント基板と液晶ディスプレイをはんだ付けすれば、Raspberry Pi の GPIO ピンヘッダに挿すことで、配線無しで液晶ディスプレイを使用できます。
 
 写真は、Raspberry Pi Zero 2 W に液晶ディスプレイを取り付けています。Raspberry Pi にも使用できます。
 
 <img src="./docs/DSC00401.JPEG" width="480">
+<img src="./docs/DSC00414.JPEG" width="480">
 
 本プロジェクトでサポートしているパネルです。
 
@@ -59,33 +60,28 @@ Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberr
 
 # 3. 環境構築
 
-## 3.1. Adafruit ライブラリインストール
+## 3.1. 仮想環境へ Adafruit ライブラリインストール
 
 ```Shell
 $ sudo apt update
 $ sudo apt upgrade
 $ sudo apt install python3-pip
-$ sudo pip3 install adafruit-circuitpython-rgb-display
-$ sudo apt install python3-pil
-$ sudo pip3 install adafruit-circuitpython-bme280
+$ sudo apt install python3-venv
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install adafruit-circuitpython-rgb-display adafruit-blinka
+$ pip install pillow
 ```
-
-インストールしたライブラリの確認。
-
-```Shell
-$ python
->>>import PIL
->>>import adafruit_rgb_display
->>>from adafruit_bme280 import basic as adafruit_bme280
-```
-
-エラーが出なければ完了です。
 
 ## 3.2. プログラムの実行
 
 1. 適当なフォルダへ main.py と image フォルダをコピー
 1. > $ python main.py
 1. "Hello World"が表示され、画像が表示されれば成功
+
+次回実行時には仮想環境を有効にして実行ください。
+
+> $ source venv/bin/activate
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
