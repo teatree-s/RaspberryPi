@@ -10,8 +10,7 @@ Raspberry Pi や Raspberry Pi Zero に取り付けることのできる Raspberr
 
 写真は、Raspberry Pi Zero 2 W に液晶ディスプレイを取り付けています。Raspberry Pi にも使用できます。
 
-<img src="./docs/DSC00401.JPEG" width="480">
-<img src="./docs/DSC00414.JPEG" width="480">
+<img src="./docs/DSC00401.JPEG" width="480"><img src="./docs/DSC00414.JPEG" width="480">
 
 本プロジェクトでサポートしているパネルです。
 
