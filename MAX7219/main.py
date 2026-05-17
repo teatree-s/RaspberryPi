@@ -7,7 +7,7 @@ from gpiozero import LED
 from matrix import MAX7219
 
 # Google GenAI SDKのAPIキーとモデルIDを設定
-YOUR_API_KEY = "AIzaSyC2eSodU_uRAoMpzi-TQPZGZIs7OSfSU5o"
+YOUR_API_KEY = "YOUR_API_KEY"
 MODEL_ID = "models/gemini-2.5-flash"
 
 # ALSA関連のエラーログが出るためPyAudioで一度出力する。
