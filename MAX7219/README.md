@@ -21,11 +21,13 @@ USBマイクから音声を入力し、その音声を Google 音声認識でテ
 
 | LED | RPi GPIO |     | MAX7219 | RPi GPIO          |
 | --- | -------- | --- | ------- | ----------------- |
-| 赤  | GPIO 17  |     | VCC     | 3.3V              |
+| 赤  | GPIO 17  |     | VCC     | 5.0V              |
 | 黄  | GPIO 27  |     | GND     | GND               |
 | 緑  | GPIO 22  |     | MOSI    | GPIO 10(SPI MOSI) |
 | 青D | GPIO 23  |     | CS      | GPIO 8(SPI CE0)   |
 |     |          |     | CLK     | GPIO 11(SPI SCLK) |
+
+MAX7219が明るすぎる場合には 3.3V に接続してください。
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
