@@ -1,0 +1,29 @@
+@startuml AIコントローラー
+|Program|
+start
+:Google GenAIクライアントの初期化;
+:音声認識の初期化;
+:LEDとMAX7219の初期化（デフォルトはLED）;
+repeat
+  :マイクからの音声入力;
+  :Google Web Speech APIで日本語音声認識;
+  if (音声 == "終了") then (yes)
+    stop
+  else (no)
+    if (音声 == "スイッチ") then (yes)
+      :モード切り替え;
+    else (no)
+      :音声を命令書に基づいてGeminiで解析;
+      if (モードがLED) then (yes)
+        :AIからJsonデータ受け取り;
+        :LEDを制御;
+      else (no)
+        :AIからバイナリデータ受け取り;
+        :MAX7219を制御;
+      endif
+    endif
+  endif
+repeat while (true)
+
+stop
+@enduml
