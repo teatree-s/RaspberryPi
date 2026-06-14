@@ -37,6 +37,7 @@ Raspberry Pi を使ったプログラムを置いています。各プロジェ�
 # 4. 参考
 
 - [Raspberry Pi hardware](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html)
+- [カメラモジュールを始めよう](https://projects.raspberrypi.org/ja-JP/projects/getting-started-with-picamera)
 
 ## 4.1. 写真
 
